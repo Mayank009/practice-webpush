@@ -1,0 +1,6 @@
+{
+  "short_name": "Web Push Practice",
+  "name": "Web Push Practice",
+  "start_url": "index.html?launcher=true",
+  "gcm_sender_id": "265699280457"
+}
