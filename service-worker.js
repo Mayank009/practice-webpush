@@ -3,9 +3,15 @@
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
 
-  var data = event.data.json();
-  var title = data.title;
-  var body = data.body;
+  if(event.data != null)
+  {
+    var data = event.data.json();
+    var title = data.title;
+    var body = data.body;
+  } else {
+    var title = 'SAMPLE TITLE';
+    var body = 'SAMPLE BODY';
+  }
 
   event.waitUntil(
     self.registration.showNotification(title, {
